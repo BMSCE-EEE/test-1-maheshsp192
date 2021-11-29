@@ -1,1 +1,48 @@
+~/test-1-maheshsp192$ gcc -g p10original.c
+p10original.c: In function ‘main’:
+p10original.c:6:11: warning: format ‘%d’ expects a matching ‘int *’ argument [-Wformat=]
+   scanf("%d %d , &num1 &num2");
+          ~^
+p10original.c:6:14: warning: format ‘%d’ expects a matching ‘int *’ argument [-Wformat=]
+   scanf("%d %d , &num1 &num2");
+             ~^
+p10original.c:7:9: warning: implicit declaration of function ‘sum’ [-Wimplicit-function-declaration]
+   add = sum(num1, num2);
+         ^~~
+p10original.c: At top level:
+p10original.c:11:19: error: expected ‘;’, ‘,’ or ‘)’ before ‘int’
+ int sum (int num1 int num2)
+                   ^~~
+~/test-1-maheshsp192$ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) break main
+Breakpoint 1 at 0x746: file p1original.c, line 9.
+(gdb) r
+Starting program: /home/runner/test-1-maheshsp192/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p1original.c:9
+9   {
+(gdb) s
+12     printf("Enter two number: ");
+(gdb) c
+Continuing.
+Enter two number: 12 13
+12.00 + 13.00 = 25.00
+[Inferior 1 (process 44) exited normally]
+(gdb) Quit
+(gdb) 
