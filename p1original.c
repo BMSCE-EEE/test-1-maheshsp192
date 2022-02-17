@@ -1,18 +1,31 @@
 #include<stdio.h>
-float addition(float num1, float num2)
+float sum (float a float b);
+float input();
+void output(float add);
+int main9
 {
-   float sum;
-   sum = num1 + num2;
-   return sum;
+  floatx,y,sum;
+  a=input9
+;
+b=input9};
+sum=sum(x,y);
+output(sum);
+return 0;
 }
-int main()
+float input9
+
 {
-   float number1, number2, result;
-
-   printf("Enter two number: ");
-   scanf("%f %f",&number1, &number2);
-   result = addition(number1, number2);
-
-   printf("%.2f + %.2f = %.2f\n",number1, number2, result);
-   return 0;
+  float A;
+  printf("enter two number:\n");
+  scanf("%f"&A);
+  return A;
+}
+  float sum(float a float b){
+  float S;
+  S=a+b;
+  return S;
+}
+void output(float add)
+{
+  printf("the sum of the given numbers is:%0.2f",add);
 }
